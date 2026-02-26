@@ -6,19 +6,22 @@ import { useRef } from "react";
 export default function About() {
     const skills = [
         {
-            category: "Backend Architecture",
-            items: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis"],
-            color: "text-emerald-400",
-            bgGradient: "from-emerald-500/10 to-transparent",
-        },
-        {
             category: "Frontend Engineering",
+            smallCategory: "Frontend",
             items: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
             color: "text-blue-400",
             bgGradient: "from-blue-500/10 to-transparent",
         },
         {
+            category: "Backend Architecture",
+            smallCategory: "Backend",
+            items: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis"],
+            color: "text-emerald-400",
+            bgGradient: "from-emerald-500/10 to-transparent",
+        },
+        {
             category: "Systems & Design",
+            smallCategory:"Systems & Design",
             items: ["System Design", "RESTful APIs", "Microservices", "Docker", "AWS"],
             color: "text-purple-400",
             bgGradient: "from-purple-500/10 to-transparent",
@@ -84,8 +87,11 @@ export default function About() {
                         }}
                     />
 
-                    <h3 className={`text-3xl font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
+                    <h3 className={`text-3xl text-center hidden md:block font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
                         {group.category}
+                    </h3>
+                    <h3 className={`text-3xl text-center block md:hidden font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
+                        {group.smallCategory}
                     </h3>
                     <ul className="flex flex-col gap-5 flex-grow font-mono text-sm uppercase tracking-widest">
                         {group.items.map((item) => (

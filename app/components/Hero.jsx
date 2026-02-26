@@ -196,13 +196,13 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600 z-10"
+                className="absolute md:bottom-8 bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600 z-10"
             >
                 <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                    className="w-[1px] h-8 bg-gradient-to-b from-neutral-600 to-transparent"
+                    className="w-px h-8 bg-linear-to-b from-neutral-600 to-transparent"
                 />
             </motion.div>
         </section>

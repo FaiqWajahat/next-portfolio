@@ -22,7 +22,7 @@ export default function Footer() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                    className="text-[15vw] leading-none font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-t from-neutral-900 to-neutral-700 select-none text-center"
+                    className="text-[15vw] leading-none font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-t from-neutral-900 to-neutral-700 select-none text-center"
                 >
                     GET IN TOUCH
                 </motion.h2>
@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
 
             {/* Decorative bottom glow */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent blur-sm" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent blur-sm" />
         </footer>
     );
 }

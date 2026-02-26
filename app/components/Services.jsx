@@ -37,12 +37,12 @@ export default function Services() {
                     {services.map((service, index) => (
                         <motion.div
                             key={service.id}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 60 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.1 }}
+                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.7 }}
                             whileHover="hover"
-                            className="group border-b border-white/10 py-10 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 relative overflow-hidden text-center md:text-left"
+                            className={` group ${index===2?"border-none": "border-b border-white/10"}  py-10 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 relative overflow-hidden text-center md:text-left  `}
                         >
                             {/* Dynamic hover background */}
                             <motion.div

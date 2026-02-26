@@ -3,33 +3,33 @@
 import { motion } from "framer-motion";
 
 export default function Experience() {
-    const experiences = [
-        {
-            year: "2023 - Present",
-            role: "Senior Software Engineer",
-            company: "Tech Solutions Inc.",
-            description:
-                "Leading the frontend development team in re-architecting legacy applications using the Next.js App Router, resulting in significant performance improvements and a modern developer experience.",
-        },
-        {
-            year: "2021 - 2023",
-            role: "Full Stack Developer",
-            company: "Innovate Startup",
-            description:
-                "Developed and maintained numerous client-facing MERN stack applications. Implemented robust RESTful APIs and designed responsive, accessible user interfaces using React and Tailwind CSS.",
-        },
-        {
-            year: "2019 - 2021",
-            role: "Web Developer",
-            company: "Creative Agency",
-            description:
-                "Collaborated closely with designers to build pixel-perfect, interactive web experiences. Managed MongoDB databases and built custom CMS solutions using Node.js and Express.",
-        },
-    ];
+    const education = [
+    {
+        year: "2022 - 2026",
+        role: "Bachelor in Computer Science",
+        company: "Superior University",
+        description:
+            "Focusing on core computer science fundamentals including Data Structures, Algorithms, Object-Oriented Programming, and Software Engineering. Developing practical skills through hands-on academic projects involving modern web technologies and database management.",
+    },
+    {
+        year: "2020 - 2021",
+        role: "Intermediate in Science",
+        company: "Aspire College",
+        description:
+            "Built a strong academic foundation in Mathematics, Physics, and Computer Science. Developed analytical problem-solving skills and learned foundational programming concepts that paved the way for advanced software engineering studies.",
+    },
+    {
+        year: "2018 - 2020",
+        role: "Matriculation in Science",
+        company: "Umer High School",
+        description:
+            "Graduated with a focus on core science subjects. Developed early analytical skills and a strong, growing interest in technology, logic, and computational problem-solving.",
+    },
+];
 
     return (
         <section
-            id="experience"
+            id="education"
             className="min-h-screen py-32 container mx-auto px-6 max-w-7xl flex flex-col justify-center border-t border-white/10"
         >
             <motion.div
@@ -39,17 +39,17 @@ export default function Experience() {
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
                 <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground text-center lg:text-left">
-                    Experience.
+                    Education.
                 </h2>
 
                 <div className="max-w-4xl w-full mx-auto space-y-20">
-                    {experiences.map((exp, index) => (
+                    {education.map((exp, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.15 }}
+                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.5 }}
                             whileHover={{ scale: 1.01 }}
                             className="flex flex-col md:flex-row gap-6 md:gap-14 group p-4 rounded-3xl hover:bg-white/5 transition-colors duration-300 items-center md:items-start text-center md:text-left"
                         >

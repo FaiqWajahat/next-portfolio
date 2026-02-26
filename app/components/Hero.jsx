@@ -60,8 +60,8 @@ export default function Hero() {
     return (
         <section
             ref={containerRef}
-            id="hero"
-            className="relative min-h-screen w-full overflow-hidden bg-[#030303] flex items-center pt-10"
+            id="about"
+            className="relative min-h-screen w-full overflow-hidden bg-[#030303] flex items-center "
         >
             {/* ── Dot Grid Background ─────────────────────── */}
             <div
@@ -112,7 +112,7 @@ export default function Hero() {
                     <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-3 mb-8">
                         <div className="w-8 h-[2px] bg-primary" />
                         <span className="text-primary text-sm font-bold uppercase tracking-[0.3em]">
-                            Portfolio — 2026
+                          Software Developer
                         </span>
                     </motion.div>
 

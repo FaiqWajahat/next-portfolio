@@ -6,8 +6,9 @@ import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
     { name: "About", href: "#about", id: "about" },
+    {name: "Expertise", href:"#expertise", id:"expertise"},
     { name: "Projects", href: "#projects", id: "projects" },
-    { name: "Experience", href: "#experience", id: "experience" },
+    { name: "Education", href: "#education", id: "education" },
     { name: "Contact", href: "#contact", id: "contact" },
 ];
 
@@ -91,7 +92,7 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <a
-                        href="#hero"
+                        href="#about"
                         onClick={() => { setActiveId(""); }}
                         className="group flex items-center gap-2.5 font-black text-xl tracking-tight text-white"
                     >
@@ -185,7 +186,7 @@ export default function Navbar() {
                                 onClick={() => setMenuOpen(false)}
                                 className="w-full flex justify-center py-3 rounded-xl bg-primary text-white font-bold text-sm hover:bg-blue-400 transition-colors"
                             >
-                                Let's Talk ↗
+                                Let's Talk 
                             </a>
                         </div>
                     </motion.div>

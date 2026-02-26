@@ -250,7 +250,7 @@ export default function Projects() {
                                         </motion.h3>
 
                                         <motion.p
-                                            className={`text-neutral-400 leading-relaxed mb-5 font-medium max-w-xl drop-shadow-lg ${index === 0 ? "text-xl" : "text-sm"}`}
+                                            className={`text-neutral-400 leading-relaxed mb-5 font-medium max-w-xl drop-shadow-lg ${index === 0 || index===5 ? "md:text-xl textt-sm h-auto overflow-hidden" : "text-sm"}`}
                                             variants={{
                                                 rest: { opacity: 0.7, y: 0 },
                                                 hover: { opacity: 1, y: -3, transition: { type: "spring", stiffness: 200, damping: 20 } },

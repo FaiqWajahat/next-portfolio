@@ -7,14 +7,14 @@ export default function About() {
     const skills = [
         {
             category: "Frontend Engineering",
-            smallCategory: "Frontend",
+            smallCategory: "Frontend Core",
             items: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
             color: "text-blue-400",
             bgGradient: "from-blue-500/10 to-transparent",
         },
         {
-            category: "Backend Architecture",
-            smallCategory: "Backend",
+            category: "Backend Engineering  ",
+            smallCategory: "Backend Core",
             items: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis"],
             color: "text-emerald-400",
             bgGradient: "from-emerald-500/10 to-transparent",
@@ -72,7 +72,7 @@ export default function About() {
                     rotateY,
                     transformStyle: "preserve-3d",
                 }}
-                className="relative h-full w-full rounded-3xl"
+                className="relative h-full w-full rounded-3xl "
             >
                 <motion.div
                     className={`h-full w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 flex flex-col relative overflow-hidden group`}
@@ -87,10 +87,10 @@ export default function About() {
                         }}
                     />
 
-                    <h3 className={`text-3xl text-center hidden md:block font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
+                    <h3 className={`text-3xl text-left hidden md:block font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
                         {group.category}
                     </h3>
-                    <h3 className={`text-3xl text-center block md:hidden font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
+                    <h3 className={`text-3xl text-left block md:hidden font-black mb-8 tracking-tighter ${group.color} drop-shadow-md`}>
                         {group.smallCategory}
                     </h3>
                     <ul className="flex flex-col gap-5 flex-grow font-mono text-sm uppercase tracking-widest">
@@ -108,8 +108,8 @@ export default function About() {
 
     return (
         <section
-            id="about"
-            className="min-h-screen py-32 container mx-auto px-6 max-w-[100vw] flex flex-col justify-center  relative"
+            id="expertise"
+            className="min-h-screen   py-32 container mx-auto px-6 max-w-[100vw] flex flex-col justify-center  relative"
 
         >
             {/* Background grain continuation */}

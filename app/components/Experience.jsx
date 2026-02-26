@@ -38,11 +38,11 @@ export default function Experience() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
-                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground">
+                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground text-center lg:text-left">
                     Experience.
                 </h2>
 
-                <div className="max-w-4xl space-y-20">
+                <div className="max-w-4xl w-full mx-auto space-y-20">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
@@ -51,17 +51,17 @@ export default function Experience() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.15 }}
                             whileHover={{ scale: 1.01 }}
-                            className="flex flex-col md:flex-row gap-6 md:gap-14 group p-4 rounded-3xl hover:bg-white/5 transition-colors duration-300"
+                            className="flex flex-col md:flex-row gap-6 md:gap-14 group p-4 rounded-3xl hover:bg-white/5 transition-colors duration-300 items-center md:items-start text-center md:text-left"
                         >
                             {/* Year Column */}
-                            <div className="md:w-1/4 pt-1">
+                            <div className="md:w-1/4 pt-1 flex justify-center md:justify-start">
                                 <span className="inline-block px-5 py-2 rounded-full border border-primary/30 text-primary font-semibold text-sm bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                                     {exp.year}
                                 </span>
                             </div>
 
                             {/* Content Column */}
-                            <div className="md:w-3/4 relative">
+                            <div className="md:w-3/4 relative flex flex-col items-center md:items-start">
                                 {/* Timeline connector visual (visible on md+) */}
                                 <div className="hidden md:block absolute -left-[30px] top-3 w-4 h-4 rounded-full bg-primary/30 group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_rgba(59,130,246,0)] group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] z-10" />
                                 <div className="hidden md:block absolute -left-[23px] top-5 w-[2px] h-[calc(100%+5rem)] bg-white/10 group-last:hidden" />

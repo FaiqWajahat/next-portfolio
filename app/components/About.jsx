@@ -119,7 +119,7 @@ export default function About() {
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
                 className="max-w-7xl mx-auto w-full relative z-10"
             >
-                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground">
+                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground text-center lg:text-left">
                     Core Expertise.
                 </h2>
 

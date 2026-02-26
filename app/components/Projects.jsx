@@ -183,7 +183,7 @@ export default function Projects() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
-                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground">
+                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-20 text-foreground text-center lg:text-left">
                     Selected Works.
                 </h2>
 

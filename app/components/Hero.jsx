@@ -104,12 +104,12 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 style={{ opacity: opacitySection }}
-                className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24 pt-28 pb-20 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-16"
+                className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24 pt-28 pb-20 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-16"
             >
                 {/* LEFT: Big name + role switcher */}
-                <div className="flex-1">
+                <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
                     {/* Overline label */}
-                    <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
+                    <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-3 mb-8">
                         <div className="w-8 h-[2px] bg-primary" />
                         <span className="text-primary text-sm font-bold uppercase tracking-[0.3em]">
                             Portfolio — 2026
@@ -135,7 +135,7 @@ export default function Hero() {
                     </div>
 
                     {/* Animated role switcher */}
-                    <motion.div variants={fadeUp} className="mt-10 flex items-center gap-4 h-12 overflow-hidden">
+                    <motion.div variants={fadeUp} className="mt-10 flex items-center justify-center lg:justify-start gap-4 h-12 overflow-hidden">
                         <div className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
                         <div className="relative flex-1 overflow-hidden">
                             <AnimatePresence mode="wait">
@@ -155,13 +155,13 @@ export default function Hero() {
                 </div>
 
                 {/* RIGHT: Description + CTA + Stats */}
-                <div className="lg:max-w-[380px] flex flex-col gap-10 lg:pb-4">
+                <div className="lg:max-w-[380px] flex flex-col items-center lg:items-start gap-10 lg:pb-4 text-center lg:text-left">
                     <motion.p variants={fadeUp} className="text-neutral-400 text-lg leading-relaxed">
                         I architect and engineer uncompromised, high-performance web applications — blending deep MERN stack expertise with obsessive UI/UX polish to create digital experiences that set industry standards.
                     </motion.p>
 
                     {/* Stats row */}
-                    <motion.div variants={fadeUp} className="flex gap-8 border-t border-white/10 pt-8">
+                    <motion.div variants={fadeUp} className="flex gap-8 border-t border-white/10 pt-8 justify-center lg:justify-start w-full">
                         {[["3+", "Years Exp."], ["15+", "Projects"], ["100%", "Client Sat."]].map(([num, label]) => (
                             <div key={label} className="flex flex-col gap-1">
                                 <span className="text-3xl font-black text-white tracking-tight">{num}</span>

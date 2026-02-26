@@ -61,7 +61,7 @@ export default function Hero() {
         <section
             ref={containerRef}
             id="about"
-            className="relative min-h-screen w-full overflow-hidden bg-[#030303] flex items-center "
+            className="relative min-h-screen w-full overflow-hidden py-6 bg-[#030303] flex items-center "
         >
             {/* ── Dot Grid Background ─────────────────────── */}
             <div
@@ -112,7 +112,7 @@ export default function Hero() {
                     <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-3 mb-8">
                         <div className="w-8 h-[2px] bg-primary" />
                         <span className="text-primary text-sm font-bold uppercase tracking-[0.3em]">
-                          Software Developer
+                          Hi, I'm
                         </span>
                     </motion.div>
 
@@ -134,24 +134,7 @@ export default function Hero() {
                         </motion.h1>
                     </div>
 
-                    {/* Animated role switcher */}
-                    <motion.div variants={fadeUp} className="mt-10 flex items-center justify-center lg:justify-start gap-4 h-12 overflow-hidden">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
-                        <div className="relative flex-1 overflow-hidden">
-                            <AnimatePresence mode="wait">
-                                <motion.span
-                                    key={roleIndex}
-                                    initial={{ y: "100%", opacity: 0 }}
-                                    animate={{ y: "0%", opacity: 1 }}
-                                    exit={{ y: "-100%", opacity: 0 }}
-                                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                                    className="absolute left-0 top-0 text-2xl md:text-3xl font-semibold text-neutral-300 tracking-tight whitespace-nowrap"
-                                >
-                                    {ROLES[roleIndex]}
-                                </motion.span>
-                            </AnimatePresence>
-                        </div>
-                    </motion.div>
+                   
                 </div>
 
                 {/* RIGHT: Description + CTA + Stats */}
@@ -171,7 +154,9 @@ export default function Hero() {
                     </motion.div>
 
                     {/* Magnetic CTA */}
-                    <motion.div variants={fadeUp}>
+                    <motion.div 
+                    className="w-full"
+                     variants={fadeUp}>
                         <motion.a
                             href="#projects"
                             ref={buttonRef}
@@ -180,12 +165,10 @@ export default function Hero() {
                             style={{ x: buttonX, y: buttonY }}
                             transition={{ type: "spring", stiffness: 200, damping: 15, mass: 0.1 }}
                             whileTap={{ scale: 0.96 }}
-                            className="group inline-flex items-center gap-4 px-8 py-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 hover:border-primary/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.25)] transition-all duration-300"
+                            className="group inline-flex items-center justify-center gap-4 w-full px-8 py-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 hover:border-primary/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.25)] transition-all duration-300"
                         >
-                            <span>Explore My Work</span>
-                            <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary group-hover:bg-white group-hover:text-black transition-all duration-300 text-sm font-black">
-                                ↗
-                            </span>
+                            <span className="text-center">Explore My Work</span>
+                            
                         </motion.a>
                     </motion.div>
                 </div>
@@ -196,7 +179,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2 }}
-                className="absolute md:bottom-8 bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600 z-10"
+                className="absolute md:bottom-4 bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600 z-10"
             >
                 <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
                 <motion.div
